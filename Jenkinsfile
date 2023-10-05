@@ -6,9 +6,6 @@ pipeline {
           sh 'mvn clean package'
         }
       }
-    stage ('Deploy') {
-      steps {
-      }
     }
   }
 }
