@@ -1,14 +1,15 @@
 pipeline {
     agent any
+    tools { 
+        maven 'Maven' 
+        jdk 'JAVA' 
+    }
     stages {
         stage ('Build') {
             steps {
-                sh 'echo Hello Build stage'
-            }
-        }
-        stage ('Test') {
-            steps {
-                sh 'echo hello Test stage'
+                echo 'This is a minimal pipeline.'
+                sh ''' java --version; 
+                mvn --version '''
             }
         }
     }
